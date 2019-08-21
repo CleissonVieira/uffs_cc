@@ -1,0 +1,17 @@
+create table aluno(int matr, int idade)
+
+
+
+
+insert into aluno values (15, 123)
+
+
+
+
+
+
+
+
+insert into aluno values (16, 456)
+Select * from aluno
+

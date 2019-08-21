@@ -1,0 +1,35 @@
+A=10 | B=20 | C=55 | D=50 | E=17 | F=1 | G=10 | H=10
+<start T1>
+<T1,A,10,20>
+<start T2>
+<T2,C,55,45>
+<T2,E,17,77>
+<commit T2>
+<T1,C,45,70>
+<start T3>
+<T3,B,20,15>
+<commit T1>
+<start T4>
+<T4,C,70,90>
+<start T5>
+<T5,D,50,65>
+<Start CKPT(T3,T4,T5)>
+<commit T4>
+<T5,D,65,40>
+<start T6>
+<T3,A,20,25>
+<T6,F,1,2>
+<T3,E,77,28>
+<commit T3>
+<End CKPT>
+<T6,A,25,32>
+<commit T5>
+<start T7>
+<T7,B,15,30>
+<commit T7>
+<Start CKPT(T6)>
+<start T8>
+<T8,G,10,30>
+<End CKPT>
+<start T9>
+<T9,H,10,30>

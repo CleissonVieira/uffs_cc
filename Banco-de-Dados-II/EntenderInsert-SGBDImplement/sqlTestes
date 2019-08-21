@@ -1,0 +1,11 @@
+create table aluno(matr int, idade int)
+insert into aluno values (123, 15)
+insert into aluno values (456, 16)
+Select * from aluno
+
+
+
+create table professor(id int, idade int)
+insert into professor values (321, 25)
+insert into professor values (654, 26)
+Select * from professor

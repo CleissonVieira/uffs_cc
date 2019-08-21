@@ -1,0 +1,13 @@
+A=200 | B=400 | C=560 | D=659 | E=445
+<start T1>
+<Start CKPT(T1)>
+<T1,A,200,300>
+<start T2>
+<T2,B,400,500>
+<T1,C,560,600>
+<commit T1>
+<End CKPT>
+<T2,D,659,800>
+<Start CKPT(T2)>
+<start T3>
+<T3,E,445,600>

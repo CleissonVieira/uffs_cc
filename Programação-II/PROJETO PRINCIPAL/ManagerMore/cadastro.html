@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Manage More</title>
+        <link rel="stylesheet" type="text/css" href="css/headerfooter.css">
+        <link rel="stylesheet" type="text/css" href="css/logincadastro.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> <!-- web font Lobster -->
+    </head>
+    <body>
+
+        <!-- cabeçalho -->
+        <header>
+            <h1 class="titulo"><a href="index.html">Manage More</a></h1>
+            <div class="login">
+                <p class="titulo1"><a href="login.html">Login</a></p>
+                <p class="titulo1"><a href="cadastro.html">Inscreva-se</a></p>	
+            </div>
+        </header>
+        <!-- fim cabeçalho -->
+
+        
+        <!-- CADASTRO -->
+        <div class="template-login">
+            <div class="antes-form">
+                <form class="login-form" method="post" onsubmit="return validaCadastro(this);">
+                    <span class="login-form-title"><strong>Cadastre-se</strong></span>
+                    <div class="campo-login-nome" data-validate = "Enter nome de usuario">
+                        <input class="input" type="text" name="nome" id="nome">
+                        <span class="focus-input" data-placeholder="Nome da Empresa"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate = "Enter cnpj">
+                        <input class="input" type="number" name="cnpj_matriz" id="cnpj_matriz">
+                        <span class="focus-input" data-placeholder="CNPJ Matriz"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate="Enter senha">
+                        <input class="input" type="password" name="senha" id="senha">
+                        <span class="focus-input" data-placeholder="Senha"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate="Enter confirma senha">
+                        <input class="input" type="password" name="confirm_senha" id="confirm_senha">
+                        <span class="focus-input" data-placeholder="Confirmar Senha"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate = "Enter e-mail">
+                        <input class="input" type="email" name="email" id="email">
+                        <span class="focus-input" data-placeholder="E-mail"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate = "Enter Inscricao Estadual">
+                        <input class="input" type="number" name="insc_estadual" id="insc_estadual">
+                        <span class="focus-input" data-placeholder="Inscrição Estadual"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate = "Enter telefone">
+                        <input class="input" type="number" name="telefone" id="telefone">
+                        <span class="focus-input" data-placeholder="Telefone"></span>
+                    </div>
+                    <div class="campo-login-nome" data-validate = "Enter endereco">
+                        <input class="input" type="text" name="endereco" id="endereco">
+                        <span class="focus-input" data-placeholder="Endereço"></span>
+                    </div>
+                    <div class="template-login-form-btn">
+                        <button type="submit" class="login-form-btn" id="botao" value="confirmar">Cadastrar</button>
+                    </div>
+                    <ul class="login-more">
+                        <li>
+                            <input type="checkbox" name="termos" id="termos" value="Car">
+                            <span class="txt1">Leu e concorda com os termos de privacidade?</span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <!-- FIM CADASTRO -->
+
+
+
+        <!-- rodape -->
+        <footer>
+            <p class="titulo">Manage More - Chapecó/SC</p>
+            <ul class="social">
+                <li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="img/googleplus.png" alt="Google+"></a></li>
+            </ul>
+        </footer>
+        <!-- fim rodape -->
+
+        <!-- JavaScripts -->
+        <script src="JS/validaForm.js"></script>
+        <!-- FIM JavaScripts -->
+    </body>
+</html>

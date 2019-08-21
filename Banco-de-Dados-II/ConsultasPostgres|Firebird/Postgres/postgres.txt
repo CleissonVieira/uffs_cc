@@ -1,0 +1,24 @@
+select count(*) from actors; -- 817718
+select count(*) from directors; -- 86880
+select count(*) from directors_genres; -- 156562
+select count(*) from movies; -- 388269
+select count(*) from movies_directors; -- 371180
+select count(*) from movies_genres; -- 395119
+select count(*) from roles; -- 3431966
+
+Documentação: https://r00t4bl3.com/post/how-to-install-postgresql-11-on-linux-mint-19-tara
+Senha: postgres
+
+       sudo -u postgres psql postgres
+
+Conectar ao BD: psql -U postgres -h localhost -d postgres
+
+Após acessar o postgres, para popular a partir de um arquivo: \i <nome do arquivo>.sql
+                                                   Vai realizar todos os comandos sql (create, update, delete, insert) criando e populando o banco.
+
+
+
+
+
+
+

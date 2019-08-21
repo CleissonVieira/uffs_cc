@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Aqui você administra seus produtos!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rent a Tool</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<body>
+    <!--CABEÇALHO-->
+    <header>
+        <h1>Administração do site</h1>
+        <h2>Rent a Tool</h2>
+    </header>
+    <!--CABEÇALHO-->
+
+    <!--MENU-->
+    <nav class="opcoes-menu">    
+        <ul>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="index.html">Produtos</a></li>
+            <li><a href="index.html">Clientes</a></li>
+            <li><a href="index.html">Pedidos</a></li>
+            <li><a href="index.html">Log off</a></li>
+        </ul>
+    </nav>
+    <!--MENU-->
+
+    <!--CONTEÚDO PRINCIPAL-->
+    <main class="col-1">
+        <form id="form-cadastro">
+            <fieldset id="form-cadastro">
+                <legend><strong>Dados do produto</strong></legend>
+                <div>
+                    <label for="nome" class="label-alinha">Nome:</label>
+                    <input type="text" name="nome" id="nome" size="50">
+                    <span class="msg-erro" id="msg-nome"></span>
+                </div>
+                <div>
+                    <label class="label-alinha">Fabricante:</label>
+                    <select>
+                        <option selected>Não informado</option>
+                        <option value="1">Bosch</option>
+                        <option value="2">Makita</option>
+                        <option value="3">Trapp</option>
+                        <option value="4">De Waltt</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="label-alinha">Selecione uma imagem:</label>
+                    <label><input type="file"></label>
+                </div>
+                <div>
+                    <label class="label-alinha desc">Descrição:</label>
+                    <textarea name="msg" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <label class="label-alinha">Voltagem:</label>
+                    <label><input type="radio" name="volt">110v</label>
+                    <label><input type="radio" name="volt">220v</label>
+                    <label><input type="radio" name="volt">Não se aplica</label>
+                </div>
+                <div>
+                    <label class="label-alinha">Categoria(s):</label>
+                        <label><input type="checkbox" name="categoria1" value="marcenaria">Marcenaria</label>
+                        <label><input type="checkbox" name="categoria2" value="jardinagem">Jardinagem</label>
+                        <label><input type="checkbox" name="categoria3" value="limpeza">Limpeza</label>
+                        <label><input type="checkbox" name="categoria1" value="escritorio">Escritório</label>
+                        <label><input type="checkbox" name="categoria1" value="mecanica">Mecânica</label>
+                        <label><input type="checkbox" name="categoria1" value="outros">Outros</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><strong>Dados da locação</strong></legend>
+                <div>
+                    <label class="label-alinha">Quantidade disponível:</label>
+                    <label><input type="number" name="quantidade" value="1" min="1"></label>
+                </div>
+                <div>
+                    <label class="label-alinha">Valor da locação:</label>
+                    <label><input type="text" name="valor" placeholder="0.00"></label>
+                </div>
+                <div>
+                    <label class="label-alinha">Desconto promocional:</label>
+                    <label><input type="text" name="desconto" value="0.00"></label>
+                </div>
+                <div id="total">
+                    <label class="label-alinha"><strong>Valor final:</strong></label>
+                    <input type="text" name="valor-final" value="0.00">
+                </div>
+            </fieldset>
+            <div class="botao">
+                <button type="submit" value="enviar">Cadastrar</button>
+                <button type="reset" value="limpar-dados">Limpar</button>
+            </div>
+        </form>
+    </main>
+
+    <aside class="col-2">
+        <ul>
+            <li>Total de produtos: 150</li>
+            <li>Locados: 99</li>
+            <li>Disponíveis: 51</li>
+        </ul>
+    </aside>
+
+    <section class="col-3">
+        <h2>Últimos 3 produtos cadastrados:</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Fabricante</th>
+                <th>Valor da locação</th>
+            </tr>
+            <tr>
+                <td>name1</td>
+                <td>name2</td>
+                <td>name3</td>
+            </tr>
+            <tr>
+                <td>fabri1</td>
+                <td>fabri2</td>
+                <td>fabri3</td>
+            </tr>
+            <tr>
+                <td>valor1</td>
+                <td>valor2</td>
+                <td>valor3</td>
+            </tr>
+        </table>
+    </section>
+    <!--CONTEÚDO PRINCIPAL-->
+
+    <!--RODAPÉ-->
+    <footer>
+        <h3>Último acesso em: 17/09/2018</h3>
+    </footer>
+    <!--RODAPÉ-->
+
+    <!--JAVASCRIP-->
+    <script src="js/javascript.js"></script>
+    <!--JAVASCRIP-->
+</body>
+</html>

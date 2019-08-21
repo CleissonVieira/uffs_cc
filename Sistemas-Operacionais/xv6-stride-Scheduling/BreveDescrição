@@ -1,0 +1,7 @@
+Pegar total de Tickets, distribuir entre os processos
+Verificar a porcentagem que cada processo recebeu de tickets
+Rodas o escalonador por aquele que tem o menor passo recebendo a CPU
+Após utilizar incrementa a quantidade de tickets no totalTickets desse processo
+Ao final contabilizar o total de tickets entre todos os processos
+Contabilizar quanto cada processo recebeu.
+A porcentagem de tickets recebido de cada processo precisa chegar próximo a porcentagem de tickets recebido no inicio

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Manage More</title>
+        <link rel="stylesheet" type="text/css" href="css/headerfooter.css">
+        <link rel="stylesheet" type="text/css" href="css/logincadastro.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> <!-- web font Lobster -->
+    </head>
+    <body>
+        <!-- cabeçalho -->
+        <header>
+            <h1 class="titulo"><a href="index.html">Manage More</a></h1>
+            <div class="login">
+                <p class="titulo1"><a href="login.html">Login</a></p>
+                <p class="titulo1"><a href="cadastro.html">Inscreva-se</a></p>	
+            </div>
+        </header>
+        <!-- fim cabeçalho -->
+
+        <!-- LOGIN -->
+            <div class="template-login heightlogin">
+                <div class="antes-form">
+                    <form class="login-form down-login" method="post" onsubmit="return validaEmail(this);">
+                        <span class="login-form-title"><strong>Será enviado um link para seu e-mail</strong></span>
+                        <div class="campo-login-nome" data-validate = "Enter e-mail">
+                            <input class="input" type="email" name="email" id="email">
+                            <span class="focus-input" data-placeholder="E-mail"></span>
+                        </div>
+                        <div class="template-login-form-btn">
+                            <button type="submit" class="login-form-btn" id="botao" value="confirmar">Encaminhar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <!-- FIM LOGIN -->
+
+        <!-- rodape -->
+        <footer>
+            <p class="titulo">Manage More - Chapecó/SC</p>
+            <ul class="social">
+                <li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="img/googleplus.png" alt="Google+"></a></li>
+            </ul>
+        </footer>
+        <!-- fim rodape -->
+        
+        <!-- JavaScripts -->
+        <script src="js/validaForm.js"></script>
+        <!-- FIM JavaScripts -->
+    </body>
+</html>

@@ -1,0 +1,4 @@
+Cria/atualizar/deletar as pastas/arquivos no repositório clonado no computador. 
+    git add .                               (adicionar o que foi feito para commitar)
+    git commit -m "mensagem do commit"      (mandar as alterações para o git)
+    git push                                (atualizar o github)

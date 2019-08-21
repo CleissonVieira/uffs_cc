@@ -1,0 +1,128 @@
+######################################################################################################################################################################################################################
+
+DAVID HILBERT - Problema da decisão (Problema de primeira ordem.
+	Todo problema definido poderia ser resolvido, verdadeiro ou falso.
+	Até 1930 ele acreditava que não existia problema sem solução.
+	Para responder o "Problema da decisão" de Hilbert era necessário
+	formalizar a definição de algoritmo.
+	Essa definição foi feita em 1936 pelo Alonzo Church e por Alan Turing).
+
+ALONZO CHURCH - Cálculo Lambda e Funções Recursivas (Com esses dois formalismos
+	Church provou que o problema de Hilbert não tem solução. Porém a tese
+	não era demonstrável, era baseada em noção intutitiva de o que é
+	definitivamente computável. Como todas as evidências indicavam ser verdadeira,
+	foi assumida como hipótese para toda a teoria da computação, conhecida como
+	Hipótese de Church).
+
+ALAN TURING - Primeiro a identificar programas escritos para uma "Máquina
+	computacional", com noções intuitivas do efetivamente computável.
+TESE DE CHURCH-TURING = Uma função é algoritmicamente computável, se e somente se,
+	é computável por uma Máquina de Turing (modelo de computação).
+
+
+RESUMO DOS 3 CITADOS ACIMA: Hilbert disse que todo problema definido poderia ser resolvido, 
+	Church provou que não através do cálculo Lambda e Recursividade e Alan Turing encontrou um 
+	problema sem solução que acabou com a teoria de Hilbert. PROBLEMA DA PARADA.
+
+######################################################################################################################################################################################################################
+
+PREFIXO - quantas cadeias da para formar com uma sequência de caracteres, começando pelo primeiro.
+	EX: abcabc: a, ab, abc, abca, abcab e abcabc.
+
+SUFIXO - quantas cadeias da para formar com uma sequência de caracteres, começando pelo último.
+	EX: abcabc: c, bc, abc, cabc, bcabc e abcabc.
+
+Sufixo e Prefixo são uma subpalavra de uma palavra.
+
+######################################################################################################################################################################################################################
+
+MONOLÍTICO: desvios condicionais e incondicionais.
+
+ITERATIVO: possui estruturas de iteração de trechos de programas. Mecanismos de controle de iterações e não permite desvios incondicionais.
+Baseado em 3 mecanismos de composição (sequenciais) de programas: Sequencial (dois programas que resultam em um terceiro, cujo efeito é a execução
+de um primeiro, após o segundo), Condicional (dois programas que resultam em um terceiro , cujo efeito é a execução de somente um dos dois), 
+Enquanto (composição de dois programas que resultam em um terceiro, cujo efeito é a execução, repetidamente do programa componente, enquanto
+o resultado de um teste for verdadeiro) e Até (análoga à composição enquanto, excecetuando que a execução do programa componente ocorre enquanto
+o resultado de um teste for falso)
+
+RECURSIVO: baseado em sub-rotinas recursivas. Lógica distribuida por todo o bloco. (não permite desvios incondicionais)
+
+COMPOSIÇÃO SEQUENCIAL: só pode ocorrer após o encerramento da operação anterior
+
+COMPOSIÇÃO NÃO-DETERMINISTICA OU ESCOLHA: próxima operação a ser executada é uma escolha entre diversas alternativas de operações
+
+COMPOSIÇÃO CONCORRENTE: as operações podem acontecer em qualquer ordem, inclusive simultaneamente; ou seja, a ordem da execução é irrelevante
+
+######################################################################################################################################################################################################################
+
+MÁQUINA: Responsável por interpretar os programas de acordo com os dados fornecidos. Com isso é possível definir computação e função computada.
+
+COMPUTAÇÃO: É um histórico do funcionamento da máquina para o programa, considerando um valor inicial.
+	FUNÇÃO COMPUTADA: é uma função induzida a partir da máquina e do programa dado, a qual é definida sempre que, para um valor de entrada
+			  existe uma computação finita (a máquina para).
+
+######################################################################################################################################################################################################################
+
+
+MÁQUINA DE TURING: é uma estrutura M = (S, Q, d, q0) em que o conjunto finito Q é o conjunto de estados da máquina (por padrão todas devem ter qsim e qnão
+	porém qsim e qnão não pertecem a Q). A função d : S × Q ? S × (Q {q sim , q não }) × {?, ?, —} é a função de transição.
+	Máquina de Turing é uma máquina de estados que opera sobre uma fita. Descrição forma da máquina de Turing: (S, Q, d, q0 ).
+	No baixo nível, por assim dizer, uma máquina de Turing é apenas uma estrutura de conjuntos acompanhada por uma função.
+	Na Tese de Church-Turing, Máquina de Turing é a definição formal de algoritmo.             d(s, q) = (s ' , q ' , ?)
+
+MÁQUINA DE TURING DE MÚLTIPLAS FITAS: sempre arrumar a máquina e depois começar a resolver o problema. Pois a primeira fita vai estar preenchida
+					porém a i+n fita vai estar vazia "u" e será necessário preencher e depois resolver o problema proposto. 
+					(q0, (?, 1001), (?, uuuu)) -> (q0, (? 1, 001), (? u, uuu))
+
+OBS MT 1 FITA E MÚLTIPLAS FITAS: Máquinas de turing comum (1 fita) são equivalente em poder as de múltiplas fitas.
+				Toda máquina de turing multifita tem uma MT de uma única fita que lhe é equivalente.
+
+
+MÁQUINAS DE TURING NÃO-DETERMINISTICA: é como se fosse uma árvore, cujos ramos correspondem a diferentes possibilitades para a máquina.
+					 Várias escolhas podem existir para o próximo passo, em qualquer ponto. Não tem mais fluxo linear do
+					estado inicial ao estado final.
+					TODA MÁQUINA DE TURING NÃO-DETERMINISTICA TEM UMA MT DETERMINÍSTICA QUE LHE É EQUIVALENTES.
+					Pode ter múltiplas fitas e apenas uma fita também (foco em apenas uma fita agora) 
+					Se quer provar que sim então alguma computação de N para X precisa ser QSIM
+					Se quer provar que não, todas as computações de N para X precisam ser QNÂO
+					Se quer provar que aceita, alguma computação termina em não-para e nenhuma computação termina em sim (loop infinito)
+					N = (S, Q, ?, q0), S = {0, 1, , } é o ? ? alfabeto da máquina;
+					Máquinas Não-determinísticas têm aplicação fundamental na modelagem formal da lógica. 
+								
+######################################################################################################################################################################################################################
+
+RECURSIVIDADE: Church criou o modelo computacional totalmente baseado em recursão, conhecido como Cálculo Lambda (equivalente a Máquina de Turing)
+
+LINGUAGEM: uma linguagem L é dita recursiva se existe uma Máquina de Turing M que decide L
+		Uma Máquina de Turing reconhece, ou aceita, uma linguagem L se M = SIM para todo x que pertence a L e M(x) = infinito
+		Uma linguagem L é dita recursivamente enumerável se existe uma Máquina de Turing que aceita L
+		Toda linguagem Recursiva é recursivamente enumerável
+		Nem toda linguagem recursivamente enumerável é recursiva || Portanto o conjunto de Recursiva está dentro de Recursivamente Enumerável
+
+RECURSIVAMENTE ENUMERADA: aceita ou reconhece uma linguagem, qsim ou aceita (loop)
+
+RECURSIVA: qsim ou qnão (para)
+
+
+FORMALISMO USADOS PARA ESPECIFICAR ALGORITMOS:
+	OPERACIONAL: define-se uma máquina abstrata, baseada em estados, instruções primitivas e instruções de como cada instrução 
+		modifica o estado. EX: Máquinas de Turing, Norma e Post.
+
+	AXIOMÁTICO: associam-se regras às componentes da linguagem. Regras permitem afirmar o que será verdadeiro após a ocorrência.
+		axiomas são proposições aceitas sem demonstraçções.
+
+	DENOTACIONAL OU FUNCIONAL: função construida a partir de funções elementares de forma composicional, no sentido de que o algoritmo
+				denotado pela função pode ser determinado em termos de suas funções componentes. EX: Cálculo Lambda (Church)
+				Lambda permite representar a diferenciar a regra de associação (função) da aplicação da mesma a um argumento.
+
+
+
+
+
+
+
+
+
+
+
+

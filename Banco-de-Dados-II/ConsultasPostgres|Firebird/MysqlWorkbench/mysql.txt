@@ -1,0 +1,9 @@
+select count(*) from actors; -- '817718'
+select count(*) from directors; -- '86880'
+select count(*) from directors_genres; -- '156562'
+select count(*) from movies; -- '388269'
+select count(*) from movies_directors; -- '371180'
+select count(*) from movies_genres; -- '395119'
+select count(*) from roles; -- '3431966'
+
+https://relational.fit.cvut.cz/dataset/IMDb  <- conexão 

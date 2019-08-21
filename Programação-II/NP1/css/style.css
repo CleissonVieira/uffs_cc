@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: red;
+}
+
+header, nav, section, footer{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.col-1, aside{
+    border-radius: 10px;
+}
+
+header, footer{
+    background-color: black;
+    color: #ffffff;
+}
+
+/*--------------------CABEÇALHO*/
+header{
+    font-family: 'Lobster', cursive;
+    display: inline;
+}
+
+header h1{
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+header h2{
+    text-align: right;
+    padding: 10px;
+}
+/*--------------------CABEÇALHO*/
+
+/*--------------------MENU*/
+nav{
+    background-color: rgba(149, 151, 156, 1.0); 
+}
+
+nav ul li{ 
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+ul li a{
+    color: white;
+}
+
+nav li:hover {
+    background-color: black;
+}
+/*--------------------MENU*/
+
+/*--------------------COL-1*/
+fieldset{
+    background-color: rgba(149, 151, 156, 0.5);
+}
+
+main{
+    width: 80%;
+    background-color: rgba(149, 151, 156, 0.7);
+}
+
+input{
+    border-radius: 8px;
+    border-color: black;
+}
+
+input[type="text"]:focus, input[type=reset]:focus, input[type="submit"]:focus, input[type="number"]:focus, select:focus, textarea:focus{
+    border: 1px solid black;
+    background-color: bisque;
+    font-weight: bold;
+}
+
+.label-alinha{
+    width: 200px;
+    padding: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+.desc{
+    position: relative;
+    top: -60px;
+}
+
+button{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.botao{
+    padding: 20px;
+    position: relative;
+    left: 400px;
+}
+
+.msg-erro{
+    display: none;
+}
+/*--------------------COL-1*/
+
+/*--------------------COL-2*/
+aside{
+    width: 20%;
+    background-color: rgba(31, 31, 32, 0.9);
+    list-style-type: none;
+    color: white;
+    
+}
+
+aside ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 5px; 
+}
+
+aside li{
+    text-transform: uppercase;
+    background-color: rgb(148, 44, 44);
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+/*--------------------COL-2*/
+
+/*--------------------COL-3*/
+section{
+    background-color: blueviolet;
+}
+/*--------------------COL-3*/
+
+/*--------------------RODAPÉ*/
+footer h3{
+    padding: 20px;
+}
+/*--------------------RODAPÉ*/
+
+
+
+
+

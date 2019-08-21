@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;    
+    text-decoration: none;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("http://s1.1zoom.me/b5050/607/Bus_2016-17_Neoplan_Tourliner_White_524813_1440x900.jpg");
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header a, header h1, footer p{
+    color: antiquewhite;
+}
+header, footer {
+    background-color: rgba(18, 18, 19, 0.78);
+    color: #ffffff;               
+    padding: 10px;
+    position: relative;
+    border-radius: 15px;
+}
+/*#####################################################################*/
+
+/*#####################################################################*/
+header a:link, footer a:link {
+    color: #fff;
+}
+
+header h1 {
+    position: relative;
+    padding-left: 20px;
+    text-shadow: 2px 0 2px #000; 
+    color: #eee; 
+    font-family: 'Lobster', cursive;
+}
+
+.titulo1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+.login {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+/*#####################################################################*/
+
+/*#####################################################################*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    clear: left;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+}
+  
+.fixed-footer {
+    position: absolute;
+}
+
+.social {
+    padding: 0;
+}
+  
+.social li{
+    display: inline;
+}
+/*#####################################################################*/
+
+@media only screen and (max-width: 600px) {
+      header h1 {
+          bottom: 30px;
+          font-size: 60px;
+      }
+}  
+

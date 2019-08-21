@@ -1,0 +1,139 @@
+h1{
+    color:black;
+    font-family: monospace;
+}
+
+p, h2{
+    background-color: rgba(149, 151, 156);
+    padding: 12px;
+    border: 2px solid black;
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+table,td,th{
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 3%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+ul li{ 
+    display: inline;
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+header{
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+.header{
+    background-color: rgba(149, 151, 156, 0.7);
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.main{
+    background-color: rgba(149, 151, 156, 0.7);
+    padding: 5px;
+    margin: 100px auto;
+    border-radius: 15px
+}
+
+body{
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2016/02/22/897903/01ea72bd842b7e65980e7bde9f3bdd66.jpg);
+}
+
+
+/*Formulário*/
+.fundo{
+    border-radius: 15px;
+    background-color: rgba(149, 151, 156, 0.9); 
+}
+
+.menos{
+    width: 90%;
+    margin: auto;
+}
+
+nav{
+    width: 60%;
+    margin: auto;
+}
+
+legend{
+    background-color: rgba(000, 000, 000, 0.9);
+    border-radius: 15px; 
+    color: #cccccc;
+    padding: 5px 20px;
+}
+
+input[type="text"], input[type=reset], input[type="submit"], input[type="number"], input[type="email"], select, textarea{
+    border: 1px solid black;
+    margin: 10px 0px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    background-color: #cccccc;
+    color: black;
+    font-family: monospace;
+}
+
+input[type="text"]:focus, input[type=reset]:focus, input[type="submit"]:focus, input[type="number"]:focus, input[type="email"]:focus, select:focus, textarea:focus{
+    border: 1px solid black;
+    background-color: bisque;
+    font-weight: bold;
+}
+
+input[type=email]:valid{
+    color: green;
+}
+
+input[type=number]:invalid{
+    color: red;
+}
+
+.label-alinha{
+    width: 70px;
+    display: inline-block;
+    text-align: left;
+}
+
+figure{
+    float: left;
+    width: 300px;
+}
+
+figure img{
+    width: 200px;
+    height: 150px;
+    transition: 0.5s;
+}
+
+figure img:hover{
+    box-shadow: 5px 5px 10px gray;
+    transform: scale(1.2) rotate(-5deg);
+}

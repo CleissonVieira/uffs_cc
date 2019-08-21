@@ -1,0 +1,21 @@
+select count(*) from actors; -- 817718
+select count(*) from directors; -- 86880
+select count(*) from directors_genres; -- 156562
+select count(*) from movies; -- 388269
+select count(*) from movies_directors; -- 371180 
+select count(*) from movies_genres; -- 395119
+select count(*) from roles; -- 3431966
+
+Documentação: https://help.ubuntu.com/community/Firebird3.0
+
+senha: firebird
+
+Conectar ao BD: sudo isql-fb
+
+create database "/home/cleisson/Documentos/UFFS/Banco-de-Dados-II/Consultas Postgres|Firebird/Firebird/database/firebirdBD.fdb" user 'SYSDBA' password 'firebird';
+
+connect "/home/cleisson/Documentos/UFFS/Banco-de-Dados-II/Consultas Postgres|Firebird/Firebird/database/firebirdBDA.fdb"; 
+
+Para usar explain analize:
+    set stats;
+    set explain;

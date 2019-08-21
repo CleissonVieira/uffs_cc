@@ -1,0 +1,148 @@
+FAZER EXERCÍCIOS DE CADA ITEM (SLIDES)
+VERIFICAR OS ITENS ENTRE "()" PARA PESQUISAR EXEMPLOS
+
+########################################################################################################################
+
+O vértice || --- aresta
+
+A ordem de um grafo é seu número de vértices
+
+Grau é quantas ligações um vértice tem
+
+Pseudografo tem loop e/ou é multiplo (multigrafo, 2 arestas que ligam dois vértices)(arestas paralelas)
+
+Grafo simples não possui loops e nem arestas paralelas
+
+Grafo nulo não possui ligações
+
+Grafo Regular é quando todos os vértices tem o mesmo grau (n de ligações)
+
+Subgrafo é um grafo qualquer que o subconjunto de vértices ou arestas esta contigo em G (grafo representante)
+
+Grafo final só tem uma ligação
+
+Teorema do número de arestas (a soma dos graus dos vértices precisa dar par para existir)
+
+Grafo orientado ou digrafo (aresta sai de um vértice em direção ao outro)
+Grau de saída dout = arestar que saem || Grau de entrada din = arestas que entram
+Vértice V é uma fonte sem din = 0 e Sumidouro se dout = 0
+
+########################################################################################################################
+
+ISOMORFISMO: é uma bijeção entre conjuntos de vértices (preserva adjacência).
+
+Exemplo: pode-se existir um ifomorfismo entre dois grafos (um segundo grafo diferente do primeiro, porém com as 
+	mesmas ligações de vértices)
+
+
+NÃO-ISOMORFO:   Se existe arestas paralelas ou loops
+		Existencia de um vértice com grau diferente
+		Conexidade (verificar o que é)
+		N de vértices e arestas
+
+GRAFOS BIPARTIDOS: grafo cujo os vértices podem ser divididos em dois conjuntos (não possui nenhum elemento em comum)
+		   Podem existir vértices isolados (precisam pertencer a U e V)
+
+GRAFOS PLANARES: Podem ser desenhados em um plano sem duas arestar se cruzarem, divide o plano em regiões (faces)
+		 Arestas limitam e determinam uma face.
+		 Se G é um grafo conexo e planar com M arestas e n vértices, qualquer representação planar de G
+		 possui (M - N + 2) faces
+				
+########################################################################################################################
+
+MATRIZ DE ADJACÊNCIA E INCIDÊNCIA:
+
+ADJACÊNCIA: Matriz quadrada e simétrica (linha = Vértice, coluna = aresta(que liga a x vértice)) Representa os vértices
+	    Não orientado apenas números positivos, orientado onde direciona é positivo e de quem recebe é negativo
+
+GRAFOS VALORADOS: As arestar possuem valores representando o custo da ligação entre os vértices.
+
+INCIDÊNCIA: Colunas são arestas, linhas vértices (na coluna representa qual vértice é ligado a qual outro vértice)
+	    Representa as arestas.
+	    Orientados possuem Número negativo que é quem recebe e positivo de onde sai a aresta.
+
+########################################################################################################################
+
+GRAFOS SIMÉTRICOS, ANTISSIMÉTRICOS E COMPLETOS:
+
+AUTOMORFISMO: forma de simetria onde o grafo é mapeado em si (um isomorfismo de um grafo G para ele mesmo)
+	      É um mesmo grafo, com os mesmos vértices e arestas que ligam para os mesmos vértices, porém formam 
+	      outro "dessenho"
+
+SIMÉTRICOS: Relação um para um, precisa existir automorfismo (para toda aresta (u, v) existe aresta (v, u)
+
+ANTISSIMÉTRICOS: é um grafo orientado que é isomórfico ao seu próprio grafo transposto (grafo orientado são 
+		 antissimétricos e não possuem loops
+
+GRAFO COMPLETO: é um grafo simples (sem loops e arestas paralelas) que todo vértice é adjacente (tem ligação/aresta) a todos os outros.
+
+GRAFO REGULAR: todos os vértices tem o mesmo grau (n de ligações/arestas)
+
+GRAFO COMPLEMENTAR: G é um grafo não completo, o complementar de G é um outro grafo com as arestas que falta para G ser completo
+		    
+########################################################################################################################
+
+CAMINHOS CICLOS E CAMINHO DE CUSTO MÍNIMO:
+
+PASSEIO: pode ser, pode ser trilha e caminho (pode repetir vértices e arestar)
+	PASSEIO TRIVIAL: não tem nenhuma aresta
+	PASSEIO ABERTO OU FECHADO: se u = v é fechado se u != v então aberto
+
+TRILHAS: Faz o trajeto sem repetir arestas 
+	Se começa e termina no mesmo vértice é fechado ou circuito
+	Se não retorna ao vértice inicial é aberta
+	    
+CAMINHOS: Faz o trajeto sem repetir vértices (apenas pode repetir o vértice inicial pra fechar o ciclo se for aberto)
+	Se começa e termina no mesmo vértice é caminho fechado ou ciclo
+	Se não retorna ao vértice inicial é aberto
+
+Todo caminho é um passeio, porém nem toda trilha é um caminho
+
+CINTURA: comprimento do menor ciclo do grafo
+
+CIRCUNFERÊNCIA: comprimento do maior ciclo de um grafo
+
+FECHOS TRANSITIVOS:todos os vértices atingíveis em um grafo não orientado a partir de x
+
+TRANSITIVO DIRETO: sucessores, vértices atingidos pelo vértice x (+) direta ou indiretamente
+
+TRANSITIVO INDIRETO: antecessores, vértices que atingem x (-) direta ou indiretamente
+
+########################################################################################################################
+
+
+BFS: distância/Vértice anterior/Cor E uma fila para colocar os próximos a serem verificados (prioridades)
+
+DFS: Começa enumerar no lado direito dos vértices até não ter mais como proseguir, após isso volta preenchendo lado esquerdo
+	Até encontrar outro caminho que ainda não seguiu ao lado direito
+
+DIJKSTRA: Começa no vértice x e apartir dele encontrar o menor caminho até vértice y
+		Todos os caminhos são somados desde x até vértice atual, pega sempre o menor da lista de vértices abertos
+		Distância/Vértice anterior
+
+########################################################################################################################
+
+CONEXIDADE E CONECTIVIDADE:
+
+CONEXIDADE: Conexo se há pelo menos uma cadeia ligando cada par de vértices do grafo G
+	SIMPLES: se há pelo menos uma cadeia unindo os vértices
+	SEMI-FORTEMENTE: existe uma cadeia que atinge todos e pelo menos um par de vértices
+	FORTEMENTE CONEXO: grafo fechado, onde todo part de vértices está associado a outro caminho
+				no sentido oposto, várias direções, há mais de um meio de chegar a ele.
+
+DESCONEXO: se há pélo menos um par de vértice que não está ligado por nenhuma cadeia
+
+
+PONTE: aresta que quando existe aumenta o número de componentes.
+
+VÉRTICE DE CORTE: se sua remoção provoca redução na conexidade do grafo.
+
+
+
+
+
+
+
+
+
+

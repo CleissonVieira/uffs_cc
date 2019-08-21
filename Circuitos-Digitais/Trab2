@@ -1,0 +1,11 @@
+ULA: Unidade Lógica e Aritmética
+
+Grupo: 3 pessoas
+
+Abaixo segue o diagrama de blocos da ULA. Sendo entradas A e B de dados, seletor de função F, saída R e D Carry-Out.
+
+O objetivo desse trabalho é projetar uma ULA com entrada e saída de 4 bits, para as seguintes funções: soma, subtração, shift left, shift right, AND, OR, NAND, Complemento de 2.
+
+Deve ser implementado o circuito lógico, tabela verdade e expressões booleanas.
+
+Pontuação: Cada função tem peso 10/8, que somados são 60% da nota do trabalho. Os outros 40% são aplicados ao relatório que contém a descrição, simulação, tabelas-verdaes e expressões e simplificações aplicadas.

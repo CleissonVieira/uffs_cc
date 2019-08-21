@@ -1,0 +1,47 @@
+.form-item{
+	padding: 10px;
+}
+
+.msg-erro{ 
+	padding-left: 200px;
+	padding-top: 5px;
+	color: red; 
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.label-alinhado{
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+	border: 1px solid #5995DA;
+	padding: 3px;
+}
+
+input[type="submit"]{
+	background-color: #5995DA;
+	color: white;
+	padding: 3px 20px;
+	border: none;
+}
+input[type="submit"]:hover{
+	box-shadow: 2px 2px 2px #000;
+	cursor: pointer;
+}
+
+#mensagem-empresa{
+	font-size: 1em;
+	font-style: italic;
+	color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+	.form-item{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: start;
+	}
+}

@@ -1,0 +1,134 @@
+    /*Serve para que as dimensões sejam descontadas dos próprios tamanhos das tags, sem prejudicar a página*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header, footer{
+    background-color: brown;
+    color: antiquewhite;
+    padding: 15px;
+    align-content: center;
+}
+
+footer{
+    clear: both;
+}
+
+header{
+    position: relative;
+}
+
+#titulo{
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+aside{
+    background-color: lightsalmon;
+    margin-top: 15px;            
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: black;
+    color: wheat;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+nav li:hover{
+    background-color: lightsalmon; 
+}
+
+footer{
+    clear: left;
+}
+
+.container{
+    background-color: #cccccc;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#img1{
+    width: 100%;
+    max-width: 755px;
+    float: center;
+    margin: 6px;
+}
+
+#img2{
+    width: 300px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 15px;
+
+}
+
+#contato{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: lightsalmon;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+#login{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#col-1, .col-2, .col-3{
+    width: 100%;
+    /*float: left;*/
+    padding: 15px;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 600px){
+    #col-1{
+        flex: 20%;
+    }
+    .col-2{
+        flex: 80%;
+    }
+    .container{
+        flex-direction: row;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 900px){
+    #col-1{
+        flex: 20%;
+    }
+    .col-2{
+        flex: 60%;
+        text-align: justify;
+    }
+    .col-3{
+        flex: 20%;
+        align-self: flex-start;
+    }
+    #contato{
+        display: block;
+    }
+}

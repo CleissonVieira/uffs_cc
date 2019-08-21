@@ -1,0 +1,23 @@
+import mysql.connector
+from mysql.connector import Error
+from mysql.connector import errorcode
+
+conn = mysql.connector.connect(host='localhost',
+                             database='teste',
+                             user='teste',
+                             password='password')
+
+try:
+    x = conn.cursor ()
+    sql_update_query = """Update account_A set balance = 500 where id = 1"""
+    x.execute(sql_update_query)
+    sql_update_query2 = """Update account_A set balance = dasdas where id = 1"""
+    x.execute(sql_update_query2)
+    x.close()
+    
+    print ("Atualizacao realizada sucesso! ")
+except mysql.connector.Error as error :
+    print("Atualizacao falhou, erro: {}".format(error)) 
+    conn.rollback ()
+
+

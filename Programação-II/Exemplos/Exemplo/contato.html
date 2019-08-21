@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang= "pt-br">
+    <head>
+        <title> Contato </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+
+    <!-- Área Superior -->
+    <header class="header">
+        <h1> Cleisson Vieira Raimundi</h1>
+        <p>Desenvolvedor Web</p> <hr>
+    </header>
+
+    <body>
+        <!--Menu-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Página inicial</a> </li>
+                <li><a href="curriculum.html">Curriculum</a> </li>
+                <li><a href="portifolio.html">Portifolio</a> </li>
+                <li><a href="temas.html">Temas de interesse</a> </li>
+                <li><a href="localizacao.html">Localização</a> </li>
+                <li><a href="contato.html">Contato</a> </li>
+            </ul>
+        </nav>
+        
+        
+        
+        <!-- Conteúdo Principal-->
+        <menu class="main">
+            <h2>Contato</h2>
+            <form action = "" method= "">
+    
+                <fieldset class="fundo menos">
+                    <legend><strong>Dados genéricos:</strong></legend>
+                    <div>
+                        <label for="text" class="label-alinha">Nome:</label>
+                        <input type="text" name:"nome">
+                    </div>
+                    <div>
+                        <label for="email" class="label-alinha">E-mail:</label>
+                        <input type="email" name:"email" id = "email">
+                    </div>
+                    <div>
+                        <label for="telefone" class="label-alinha"> Telefone:</label>
+                        <input type="number" name: "telefone">
+                    </div>
+                </fieldset>
+    
+                <fieldset class="fundo menos">
+                    <legend><strong>Perfil:</strong></legend>
+                        <label><input type = "radio" name = "perfil" value = "es">Estudante </label><br>
+                        <label><input type = "radio" name = "perfil" value = "pr">Profissional de TI </label><br>
+                        <label><input type = "radio" name = "perfil" value = "ou" checked>Outros </label><br>
+    
+                </fieldset>
+    
+                <fieldset class="fundo menos">
+                    <legend><strong>Assunto:</strong></legend>
+                    <select name="assunto">
+                        <option selected hidden> </option>
+                        <option value = "1">Duvidas</option>
+                        <option value = "2">Orçamento</option>
+                        <option value = "3">Criticas</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset class="fundo menos">
+                    <legend><strong>Horário(s) preferencial(is) para contato telefônico:</strong></legend>
+                    <label><input type = "checkbox" name = "horario[]" value "manha">Manha</label>
+                    <label><input type = "checkbox" name = "horario[]" value "tarde">Tarde</label>
+                    <label><input type = "checkbox" name = "horario[]" value "noite">Noite</label>
+                </fieldset>
+                    
+                <fieldset class="fundo menos">
+                    <legend><strong>Mensagem:</strong></legend>
+                    <textarea name = "msg" rows = "5" cols="70"></textarea>
+                    <div>
+                        <input type ="submit" value="enviar">
+                        <input type="reset" value="limpar campos">
+                    </div>
+                </fieldset>
+                    
+            </form>
+        </menu>
+        
+        <!-- Rodapé-->
+        <footer>
+            <p>Área de rodapé</p>
+        </footer>
+
+    </body>
+</html>
