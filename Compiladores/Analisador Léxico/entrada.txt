@@ -1,0 +1,39 @@
+se
+ou_se
+se_nao
+enquanto
+repete
+escolhe
+escreve
+caso
+na_tela
+quebra
+continua
+espera
+ou
+e
+novoV
+=
+:
+{
+}
+(
+)
+/
+-
+.
+,
+"
++
+*
+0
+1
+2
+3
+4
+5
+
+<S> ::= x<A> | y<B> | $ | x
+<A> ::= y<B>
+<B> ::= x<C>
+

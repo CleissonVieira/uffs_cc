@@ -1,0 +1,5 @@
+service mongod start
+mongo
+
+dotnet build
+dotnet run

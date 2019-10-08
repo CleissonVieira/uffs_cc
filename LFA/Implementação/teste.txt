@@ -1,6 +1,28 @@
-if
-it
-at
+se
+ou_se
+se_nao
+enquanto
+repete
+escolhe
+caso
+na_tela
+quebra
+continua
+espera
+ou
+e
+novo
+=
+{
+}
+(
+)
+/
+-
++
+*
 
-<S> ::= a<A> | i<A> | <A>
-<A> ::= a<A> | i<A> | $
+<S> ::= x<A> | y<B> | $ | x
+<A> ::= y<B>
+<B> ::= x<C>
+

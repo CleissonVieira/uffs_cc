@@ -3,7 +3,7 @@ from Producao import Producao
 from Inuteis import Inuteis
 
 
-############################## Organiza o automato para realizar as operações das classes abaixo ##############################
+############################## Organiza o automato para realizar as operacoes das classes abaixo ##############################
 automato = Automato()                              
 automato.carrega('teste.txt')                      
 automato.imprimir('\n\n# AUTOMATO LIDO:\n', True)  
@@ -74,8 +74,7 @@ class EpsilonTransicao(Automato):
 
 livreEpsilon = EpsilonTransicao(automato)           
 livreEpsilon.eliminarEpsilonTransicoes()      #busca e trata a epsilon
-livreEpsilon.imprimir()                            
-
+#livreEpsilon.imprimir()                            
 
 ############################## Determiniza ##############################
 class Determinizacao(Automato):
@@ -209,7 +208,7 @@ class Determinizacao(Automato):
 
 determinizado = Determinizacao(automato) 
 determinizado.determinizar()                   
-determinizado.imprimir()
+#determinizado.imprimir()
 
 
 ############################## Elimina inalcançaveis ##############################
@@ -242,7 +241,7 @@ class Inalcancaveis(Inuteis):
 
 semInalcancaveis = Inalcancaveis(automato)
 semInalcancaveis.removerInalcancaveis()    
-semInalcancaveis.imprimir() 
+#semInalcancaveis.imprimir() 
 
 
 ############################## Elimina mortos ##############################
@@ -252,7 +251,7 @@ class Mortos(Inuteis):
         super(Mortos, self).__init__(automato)
     
     def imprimir(self):
-        return super().imprimir('\n\n# SEM MORTOS:\n')
+        return super().imprimir('\n\n# DETERMINIZADO, LIVRE DE EPSILON TRANSIÇÃO E LIVRE DE MORTOS E INALCANÇAVÉIS:\n')
 
     def removerMortos(self):
         estados = self.gerarEstadosParaMinimizacao()
