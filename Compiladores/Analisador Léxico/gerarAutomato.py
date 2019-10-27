@@ -2,7 +2,6 @@ from Automatos import Automato
 from Producao import Producao
 from Inuteis import Inuteis
 
-
 ############################## Organiza o automato para realizar as operacoes das classes abaixo ##############################
 automato = Automato()                              
 automato.carrega('entrada.txt')                      
@@ -251,7 +250,7 @@ class Mortos(Inuteis):
         super(Mortos, self).__init__(automato)
     
     def imprimir(self):
-        return super().imprimir('\n\n# DETERMINIZADO, LIVRE DE EPSILON TRANSIÇÃO E LIVRE DE MORTOS E INALCANÇAVÉIS:\n')
+        return super().imprimir('#DETERMINIZADO, LIVRE DE EPSILON TRANSIÇÃO E LIVRE DE MORTOS E INALCANÇAVÉIS:\n')
 
     def removerMortos(self):
         estados = self.gerarEstadosParaMinimizacao()

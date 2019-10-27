@@ -1,8 +1,8 @@
 /**
  * This demo shows how to periodically call an update() function to create
- * animations over time. In this case, the animation is to rotate a red square.
+ * animations over time. In this case, the animation is to rotate a chess tower.
  *
- * Author: Fernando Bevilacqua <fernando.bevilacqua@uffs.edu.br>
+ * Author: Cleisson Vieira Raimundi <cleisson.raimundi@gmail.com>
  * License: MIT
  */
 
@@ -49,8 +49,81 @@ void renderCoordinateAxis()
 	glEnd();
 }
 
+void torre(){
+	glPushMatrix();
+		glScalef(3, 3, 3);
+	//Cubos da base de cima da torre
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glTranslatef(0.0, 0.0, 0.14);
+			glTranslatef(0.0, 0.75, 0.0);
+			glutSolidCube(0.08);
+		glPopMatrix();
+
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glTranslatef(0.0, 0.0, -0.14);
+			glTranslatef(0.0, 0.75, 0.0);
+			glutSolidCube(0.08);
+		glPopMatrix();
+
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glTranslatef(-0.14, 0.0, 0.0);
+			glTranslatef(0.0, 0.75, 0.0);
+			glutSolidCube(0.08);
+		glPopMatrix();
+
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glTranslatef(0.14, 0.0, 0.0);
+			glTranslatef(0.0, 0.75, 0.0);
+			glutSolidCube(0.08);
+		glPopMatrix();
+
+	//Base de cima
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glScalef(0.45, 0.45, 0.45);
+			glTranslatef(0.0, 1.45, 0.0);
+			glRotatef(90, 0, 0, 1);
+			glRotatef(90, 0, 1, 0);
+			glutSolidTorus(0.20, 0.25, 10, 10);
+		glPopMatrix();
+
+	//Corpo meio
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glTranslatef(0.0, 0.4, 0.0);
+			glScalef(.4, 1.2, .4);
+			glutSolidCube(0.5);
+		glPopMatrix();
+
+
+	//Bases de baixo
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glScalef(0.45, 0.45, 0.45);
+			glTranslatef(0.0, 0.2, 0.0);
+			glRotatef(90, 0, 0, 1);
+			glRotatef(90, 0, 1, 0);
+			glutSolidTorus(0.20, 0.25, 10, 10);
+		glPopMatrix();
+
+		glPushMatrix();
+			glColor3f(0., 0., 0.);
+			glScalef(0.5,0.5,0.5);
+			glTranslatef(0.0, 0.0, 0.0);
+			glRotatef(90, 0, 0, 1);
+			glRotatef(90, 0, 1, 0);
+			glutSolidTorus(0.20, 0.25, 10, 10);
+		glPopMatrix();
+	glPopMatrix();
+	
+}
+
 void display()
-{
+{	
 	// Clear the screen painting it with the white color
 	glClearColor(1, 1, 1, 0);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -66,23 +139,26 @@ void display()
 	// Render the X and Y axis to guide ourselves.
 	renderCoordinateAxis();
 
-	// Rotate the red square by "angle" degrees.
-	glRotatef(angle, 0.0f, 0.0f, 1.0f);
-	
-	// Render a red square
-	//        R  G  B
-	glColor3f(1, 0, 0);
-	//        x1    y1    x2     y2
-	glRectf(-1.0f, 1.0f, 1.0f, -1.0f);
+	glRotatef(angle, 0, 1, 0);
 
-	// Start the rendering on a new frame
+	glPushMatrix();
+		glTranslatef(5, 0 ,0);
+		torre();
+	glPopMatrix();
+
+	glPushMatrix();
+		glTranslatef(-5, 0 ,0);
+		torre();
+	glPopMatrix();
+
+
 	glutSwapBuffers();
 }
 
 void update(int value)
 {
 	// Update the angle of rotation
-	angle += 3;
+	angle += 1;
 
 	// Request a new frame rendering
 	glutPostRedisplay();

@@ -1,5 +1,5 @@
 from Producao import Producao 
-import re                    
+import re
 
 class Automato(object):         #carga do automato finito
 
@@ -106,41 +106,56 @@ class Automato(object):         #carga do automato finito
 
 
     def imprimir(self, mensagem, First = False):        #imprime o automato no terminal e no arquivo.txt
-        self.imprimirTela(mensagem)             
-        self.imprimirArquivo(mensagem, First)   
-        
-    
+        self.imprimirTela(mensagem)            
+        self.analisador_lexico()
+
     def imprimirTela(self, mensagem = ''):      #imprime automato deterministico
-        print(mensagem)                                             #mostra mensagem, para identificar o automato que se está imprimindo
+        # print(mensagem)                                             #mostra mensagem, para identificar o automato que se está imprimindo
         estados = self.pegarAutomato()                              #utiliza o estado minimiazdo se existir
-        for nome, estado in sorted(estados.items()):                #percorre estados
-            print(' *' if nome in self.Finais else '  ', end='')    #marca estados finais
-            print(nome, end=' = ')                                  #imprime nome/numero do estado
+        for nome, estado in sorted(estados.items()):                #PERCORRE CADA ESTADO(nome) com uma lista desse estado(estado)
+            print(' *' if nome in self.Finais else '  ', end='')    #se NOME está em FINAIS, então *
+            print(nome, end=' = ')                                  #imprime NOME/NUMERO do estado
             for simbolo, transicoes in estado.items():              #percorre cada estado    
                 if len(transicoes) > 0:                             #se existir transições para símbolo
                     print(simbolo, transicoes, end=', ')            #imprime símbolo e lista de transições
             print('')
+        
+        
+    def analisador_lexico(self):
+        tabela = self.pegarAutomato()
+        fitaS = [] 
+        Ts = []    
+        codigoFonte = list(open('codigo.txt'))
+        separador = [' ', '\n', '\t']
+        palavra = ''
+        count = 0
+        estado = 0
+        for linha in codigoFonte:
+            count += 1
+            for caracter in linha:
+                if caracter in separador and palavra:
+                    Ts.append({'Linha': str(count), 'Estado': str(estado), 'Rotulo': palavra.strip('\n')})
+                    fitaS.append(estado)
+                    estado = 0
+                    palavra = ''
+                else:    
+                    try:
+                        estado = tabela[estado][caracter][0]
+                    except KeyError:
+                        estado = -1
+                    if caracter != ' ':
+                        palavra += caracter
 
+        print("\nFINAIS: ", self.Finais, "\n")
+        for x in Ts:
+            print(x)
+        print('\n')
 
-    def imprimirArquivo(self, mensagem = '', First = False):        #imprime automato finito deterministico
-        if First:           #se for o primeiro autômato da execução
-            arquivo = open('automato.txt', 'w')   #reseta o arquivo
-        else:           
-            arquivo = open('automato.txt', 'a')   #add ao arquivo já existente
-
-        estados = self.pegarAutomato()      #utiliza o estado minimizado se existir
-
-        arquivo.write(mensagem)              #insere mensagem para identificar o automato que está imprimindo
-        for nome, estado in sorted(estados.items()):                #percorre os estados
-            arquivo.write(' *' if nome in self.Finais else '  ')    #marca estados finais
-            arquivo.write(str(nome) + ' = ')               #imprime nome/numero do estado
-
-            for simbolo, transicoes in estado.items():     #faz um loop em cada estado
-                
-                if len(transicoes) > 0:         #se existir transições para um símbolo
-                    arquivo.write(simbolo + str(transicoes) + ', ') #imprime símbolo e lista de transições
-
-            arquivo.write('\n')
+        for erro in Ts:
+            if erro['Estado'] == '-1':
+                print('Erro Léxico: linha {}, erro {}' .format(erro['Linha'], erro['Rotulo']))
+        return Ts      
+        
 
 
     def setAlfabetoEstado(self, estado):    #em um estado é inserido todos os símbolos do alfabeto

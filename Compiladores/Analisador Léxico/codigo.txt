@@ -1,24 +1,6 @@
-novoV opcao
-novoV A, B, C
-escreve(A, B, C)
-escolhe(escreve(opcao)):
-    caso 1:
-        se(A > B){
-            enquanto(A > B){
-                B++
-                escreve(B)
-            }
-        }ou_se(B > C){
-            repete(B > C, C++){
-                escreve(C)
-            }
-            escreve("Todos sao iguais, recalculando", A /= 2 e B -= A/2,"novos valores:","A-"A,"/B-"B,"/C-"C)
-            espera(0.2, limpa_tela, continua)
-        }se_nao{
-            novoV Total = A * B * C
-            espera(0.1, escreve("Total:"Total), continua)
-        }
-        quebra
-    caso 2:
-        na_tela("Operação Finalizada")
-        quebra
+se ( .0. == .1. ) :
+{ .01. }
+ou_se ( .0. - .1. != .00. ) :
+{ .10. }
+se_nao :
+{ .. }
