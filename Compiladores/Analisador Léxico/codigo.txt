@@ -1,6 +1,30 @@
-se ( .0. == .1. ) :
-{ .01. }
-ou_se ( .0. - .1. != .00. ) :
-{ .10. }
-se_nao :
-{ .. }
+novov .x0x0x0x0. = 0986545641
+se
+ou_se
+se_nao
+enquanto
+repete
+escolhe
+escreve
+caso
+na_tela
+quebra
+continua
+espera
+ou
+e
+novov
+=
+==
+!=
+:
+{
+}
+(
+)
+/
+-
+,
+"
++
+*

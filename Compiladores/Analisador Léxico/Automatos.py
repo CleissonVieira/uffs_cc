@@ -107,7 +107,7 @@ class Automato(object):         #carga do automato finito
 
     def imprimir(self, mensagem, First = False):        #imprime o automato no terminal e no arquivo.txt
         self.imprimirTela(mensagem)            
-        self.analisador_lexico()
+        self.analisador_lexico_sintatico()
 
     def imprimirTela(self, mensagem = ''):      #imprime automato deterministico
         # print(mensagem)                                             #mostra mensagem, para identificar o automato que se está imprimindo
@@ -121,7 +121,7 @@ class Automato(object):         #carga do automato finito
             print('')
         
         
-    def analisador_lexico(self):
+    def analisador_lexico_sintatico(self):
         tabela = self.pegarAutomato()
         fitaS = [] 
         Ts = []    
@@ -147,6 +147,9 @@ class Automato(object):         #carga do automato finito
                         palavra += caracter
 
         print("\nFINAIS: ", self.Finais, "\n")
+
+        print("\n Fita de saída:", fitaS, "\n")
+
         for x in Ts:
             print(x)
         print('\n')
@@ -154,7 +157,10 @@ class Automato(object):         #carga do automato finito
         for erro in Ts:
             if erro['Estado'] == '-1':
                 print('Erro Léxico: linha {}, erro {}' .format(erro['Linha'], erro['Rotulo']))
-        return Ts      
+        
+        
+
+
         
 
 
