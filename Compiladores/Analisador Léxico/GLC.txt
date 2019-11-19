@@ -1,2 +1,5 @@
-<0> ::= <80>
-<80> ::= <99> = <98> | <0>
+<S> ::= <VAR>
+<VAR> ::= name = valor <OP> | <VAR>
+<OP> ::= se (  ) | ou_se (  ) | se_nao (  ) | 
+                enquanto ( <OP EXP> ) {  }
+<OP EXP> ::= 

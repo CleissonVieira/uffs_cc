@@ -130,13 +130,17 @@ void enlace(){
 
 
 
-    // for (int i = 0; i < roteadores_lista.tamanho; i++){
-    //     if(i+1 == roteador_meu.id){
-    //         for (int j = 0; j < roteadores_lista.tamanho; j++){
-    //             roteador_meu.vizinhos[j] = matriz[i][j];
-    //         }
-    //     }
-    // }        
+    for (int i = 0; i < roteadores_lista.tamanho; i++){
+        if(i+1 == roteador_meu.id){
+            for (int j = 0; j < roteadores_lista.tamanho; j++){
+                roteador_meu.tab_rout[roteador_meu.id-1].vizinhos[j] = matriz[i][j];
+            }
+        }
+    }
+
+    for (int i = 0; i < roteadores_lista.tamanho; i++){
+        printf("%d ", roteador_meu.tab_rout[roteador_meu.id-1].vizinhos[i]);
+    }
 
     // para cada roteador_meu.id -> para cada vizinho direto
     // envia o vetor roteador_meu.vizinhos

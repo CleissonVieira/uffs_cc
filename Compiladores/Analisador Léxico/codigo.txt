@@ -3,10 +3,7 @@ se
 ou_se
 se_nao
 enquanto
-repete
-escolhe
 escreve
-caso
 na_tela
 quebra
 continua

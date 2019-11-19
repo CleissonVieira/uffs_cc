@@ -1,4 +1,4 @@
-#include <stdio.h>
+d#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <estruturas.h>
@@ -101,7 +101,6 @@ void roteador_func(){
     while(fscanf(file, "%d %d %s", &aux.id, &aux.porta, aux.endereco) != EOF ){
         i = roteadores_lista.tamanho++;
         roteadores_lista.roteadores[i] = aux;
-        printf("4");
         //verifica se meu roteador está dentro de roteador.config/existe e passa demais informações para roteador_meu
         if(aux.id == roteador_meu.id){ 
             roteador_meu = aux;
@@ -208,6 +207,7 @@ void enlace(){
     while(fscanf(file, "%d %d %d", &x, &y, &tam) != EOF ){
         matriz[x-1][y-1] = tam;
         matriz[y-1][x-1] = tam;
+        printf("%d - %d\n",matriz[x-1],matriz[y-1]);
     }
 
     // Aplica dijkstra na matriz com as distancias entre os roteadores a partir do meu roteador

@@ -7,8 +7,8 @@ typedef struct pacote{
 
 typedef struct roteador{
     int id;
-    int porta ;
-    char endereco[16];
+    int porta;
+    char endereco[32];
 }roteador;
 
 typedef struct lista_roteadores{
