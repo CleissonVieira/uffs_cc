@@ -1,0 +1,28 @@
+se
+ou_se
+enquanto
+escreve
+na_tela
+novov
+quebra
+=
+==
+!=
+:
+{
+}
+(
+)
+/
+-
++
+*
+,
++ior
+-ior
+
+<S> ::= .<A> | 0<C>
+<A> ::= a<A> | b<A> | c<A> | d<A> | e<A> | f<A> | g<A> | h<A> | i<A> | j<A> | k<A> | l<A> | m<A> | 
+        n<A> | o<A> | p<A> | q<A> | r<A> | s<A> | t<A> | u<A> | v<A> | w<A> | x<A> | y<A> | z<A> | ~<B>
+<B> ::= $
+<C> ::= 1<C> | 2<C> | 3<C> | 4<C> | 5<C> | 6<C> | 7<C> | 8<C> | 9<C> | 0<C> | $

@@ -1,0 +1,14 @@
+"Start Symbol" = <S>
+<S> ::= 'novov' <VAR0>
+<VAR0> ::= '.name.' '=' '0constant' <VAR0> | <OP>
+<OP> ::= <LOGIC> <OP> | <PRINT> <OP> | <SCANF> <OP> | <>
+<LOGIC> ::= 'se' '(' <OPEX> ')' '{' <EXP> '}' <ELSE> | 'enquanto' '(' <OPEX> ',' <INC> ')' '{' <EXP> '}'
+<ELSE> ::= 'ou_se' '(' <OPEX> ')' '{' <EXP> '}' | <>
+<SCANF> ::= 'escreve' '(' '.name.' ')' ':' '0constant' 
+<PRINT> ::= 'na_tela' '(' '.name.' ')' | 'na_tela' '(' '0constant' ')' 
+<OPEX> ::= <VAR> | <CONSTANT>
+<VAR> ::= '.name.' '==' '.name.' | '.name.' '!=' '.name.' | '.name.' '+ior' '.name.' | '.name.' '-ior' '.name.'
+<CONSTANT> ::= '.name.' '==' '0constant' | '.name.' '!=' '0constant' | '.name.' '+ior' '0constant' | '.name.' '-ior' '0constant'
+<EXP> ::= '.name.' '=' <SIMB> '*' <SIMB> | '.name.' '=' <SIMB> '/' <SIMB> | '.name.' '=' <SIMB> '-' <SIMB> | '.name.' '=' <SIMB> '+' <SIMB> | 'quebra' | <>
+<SIMB> ::= '-' '.name.' | '.name.' | '-' '0constant' | '0constant'
+<INC> ::= '.name.' '+' | '.name.' '-' | '.name.' '+' '0constant' | '.name.' '-' '0constant' | <>
